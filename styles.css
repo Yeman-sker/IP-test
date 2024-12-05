@@ -1,0 +1,120 @@
+* {
+    transition: 0.2s;
+}
+
+body {
+    font-family: 'lato', sans-serif;
+    font-size: 1.1em;
+    background: #999 url(http://www.graphicartsunit.com/images/dummy_bg2.jpg) no-repeat fixed;
+    background-size: cover;
+}
+
+button,
+input[type=text] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.form-contents {
+    white-space: nowrap;
+    text-align: center;
+    position: absolute;
+    top: 70%;
+    width: 100%;
+    transform: translate(0%, -50%);
+}
+
+.fc {
+    position: relative;
+    display: inline-block;
+    margin: 0 0.6em;
+
+    input[type='text'],
+    label {
+        padding: 0.8em 0;
+        border: none;
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+    }
+
+    input[type='text'] {
+        font-weight: bold;
+        outline: 0;
+        width: 15em;
+        background: transparent;
+        color: #fff;
+        display: block;
+
+        &:hover {
+            border-bottom-color: rgba(255, 255, 255, 0.7);
+        }
+
+        &:focus {
+            border-bottom-color: rgba(255, 255, 255, 1.0);
+        }
+    }
+
+    label {
+        border-bottom-color: transparent;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        color: rgba(255, 255, 255, 0.15);
+    }
+
+    input[type=text]:focus~label,
+    input[type=text]:valid~label {
+        margin: -1.6em 0 0;
+        color: rgba(255, 255, 255, 0.4);
+    }
+
+    input[type=text]:hover~label {
+        color: rgba(255, 255, 255, 0.4);
+    }
+
+    button {
+        padding: 0.8em 2em;
+        letter-spacing: 0.1em;
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, 0.4);
+        color: rgba(255, 255, 255, 0.4);
+        border-radius: 100px;
+
+        &:hover {
+            border-color: rgba(255, 255, 255, 0.7);
+            color: rgba(255, 255, 255, 0.7);
+        }
+    }
+}
+
+#clock {
+    font-family: 'Share Tech Mono', monospace;
+    color: #ffffff;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+    color: #daf6ff;
+    text-shadow: 0 0 20px rgba(10, 175, 230, 1), 0 0 20px rgba(10, 175, 230, 0);
+
+    .time {
+        letter-spacing: 0.05em;
+        font-size: 80px;
+        padding: 5px 0;
+    }
+
+    .date {
+        letter-spacing: 0.1em;
+        font-size: 24px;
+    }
+
+    .text {
+        letter-spacing: 0.1em;
+        font-size: 12px;
+        padding: 20px 0 0;
+    }
+}
